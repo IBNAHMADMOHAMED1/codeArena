@@ -1,0 +1,109 @@
+<!-- Start Navbar Area -->
+<header id="header">
+    <div
+        class="crake-nav"
+    >
+        <div class="container">
+            <nav class="navbar navbar-expand-md navbar-light">
+                <a class="navbar-brand" routerLink="/">
+                    <img src="assets/img/{{ logo }}" alt="logo" />
+                </a>
+
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div
+                    class="collapse navbar-collapse mean-menu"
+                    id="navbarSupportedContent"
+                >
+                    <ul class="navbar-nav nav ms-auto">
+                        <li>
+                            <a
+                                routerLink="/"
+                                [routerLinkActiveOptions]="{ exact: true }"
+                                routerLinkActive="active"
+                            >
+                                Home</a
+                            >
+                        </li>
+                        <li>
+                            <a routerLink="/about-us" routerLinkActive="active"
+                                >About Us</a
+                            >
+                        </li>
+                        <li class="nav-item">
+                            <a
+                                routerLink="contact-us"
+                                class="nav-link"
+                                routerLinkActive="active"
+                                >Contact</a
+                            >
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a href="javascript:void(0)" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
+
+                            <ul class="dropdown_menu dropdown-menu">
+                                <div *ngIf="!isAuthenticated">
+                                    <li class="nav-item"><a routerLink="/login" routerLinkActive="active" class="nav-link">Login</a></li>
+                                    <li class="nav-item"><a routerLink="/signup" routerLinkActive="active" class="nav-link">Sign Up</a></li>
+                                </div>
+                                <div *ngIf="isAuthenticated">
+                                   <li class="nav-item"><a routerLink="/dashboard" routerLinkActive="active" class="nav-link">Chanlgenges</a></li>
+                                    <li class="nav-item"><a routerLink="/profile" routerLinkActive="active" class="nav-link">Profile</a></li>
+                                    <li class="nav-item"><a routerLink="/logout" routerLinkActive="active"
+                                        style="color: red !important;"
+                                        class="nav-link">Logout</a></li>
+                                </div>
+                            </ul>
+                        </li>
+
+                    </ul>
+                </div>
+
+                <div class="mr-auto others-option">
+                    <ul class="navbar-nav">
+                        <li class="header-search-box">
+                            <a
+                                href="javascript:void(0)"
+                                id="header-search-main"
+                                title="Search"
+                            >
+                                <i class="icofont-search-2"></i>
+                            </a>
+                        </li>
+
+                        <li data-bs-toggle="modal" data-bs-target="#myModal2">
+                            <div class="side-menu">
+                                <span class="bar-1"></span>
+                                <span class="bar-2"></span>
+                                <span class="bar-3"></span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+</header>
+<!-- End Navbar Area -->
+
+<app-sidebar></app-sidebar>
+
+<!-- Start Search Box -->
+<div id="header-search" class="header-search">
+    <button type="button" class="close">×</button>
+    <form class="header-search-form">
+        <input type="search" value="" placeholder="Type here........" />
+        <button type="submit" class="btn btn-primary">Search</button>
+    </form>
+</div>
+<!-- End Search Box -->
