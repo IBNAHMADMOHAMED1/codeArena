@@ -1,3 +1,4 @@
+import { AuthRoutingModule } from './auth-routing.module';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { SaasLandingComponent } from './components/pages/saas-landing/saas-landing.component';
@@ -26,33 +27,33 @@ import { SignupComponent } from './components/pages/signup/signup.component';
 
 
 const routes: Routes = [
-    { path: '', component: ProductLandingComponent },
-    { path: 'app-landing', component: AppLandingComponent },
-    { path: 'digital-marketing', component: DigitalMarketingComponent },
-    { path: 'product-landing', component: ProductLandingComponent },
-    { path: 'software-landing', component: SoftwareLandingComponent },
-    { path: 'book-landing', component: BookLandingComponent },
-    { path: 'startup-agency', component: StartupAgencyComponent },
-    { path: 'payment-processing', component: PaymentProcessingComponent },
-    { path: 'about-us', component: AboutUsComponent },
-    { path: 'features', component: FeaturesComponent },
-    { path: 'services', component: ServicesComponent },
-    { path: 'gallery', component: GalleryComponent },
-    { path: 'team', component: TeamComponent },
-    { path: 'pricing', component: PricingComponent },
-    { path: 'projects', component: ProjectsComponent },
-    { path: 'blog', component: BlogComponent },
-    { path: 'blog-details', component: BlogDetailsComponent },
-    { path: 'contact-us', component: ContactUsComponent },
-    { path: 'faq', component: FaqComponent },
-    { path: 'coming-soon', component: ComingSoonComponent },
-    { path: 'login', component: LoginComponent },
-    { path: 'signup', component: SignupComponent },
-    { path: '**', component: NotFoundComponent },
+    // { path: '', component: ProductLandingComponent },
+    // { path: 'app-landing', component: AppLandingComponent },
+    // { path: 'digital-marketing', component: DigitalMarketingComponent },
+    // { path: 'product-landing', component: ProductLandingComponent },
+    // { path: 'software-landing', component: SoftwareLandingComponent },
+    // { path: 'book-landing', component: BookLandingComponent },
+    // { path: 'startup-agency', component: StartupAgencyComponent },
+    // { path: 'payment-processing', component: PaymentProcessingComponent },
+    // { path: 'about-us', component: AboutUsComponent },
+    // { path: 'features', component: FeaturesComponent },
+    // { path: 'services', component: ServicesComponent },
+    // { path: 'gallery', component: GalleryComponent },
+    // { path: 'team', component: TeamComponent },
+    // { path: 'pricing', component: PricingComponent },
+    // { path: 'projects', component: ProjectsComponent },
+    // { path: 'blog', component: BlogComponent },
+    // { path: 'blog-details', component: BlogDetailsComponent },
+    // { path: 'contact-us', component: ContactUsComponent },
+    // { path: 'faq', component: FaqComponent },
+    // { path: 'coming-soon', component: ComingSoonComponent },
+    // // { path: 'login', component: LoginComponent },
+    // { path: 'signup', component: SignupComponent },
+    // { path: '**', component: NotFoundComponent },
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes, { relativeLinkResolution: 'legacy' })],
+  imports: [RouterModule.forRoot(routes, { relativeLinkResolution: 'legacy' }),AuthRoutingModule],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

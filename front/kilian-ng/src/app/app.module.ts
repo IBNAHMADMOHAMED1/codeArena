@@ -31,6 +31,7 @@ import { SignupComponent } from './components/pages/signup/signup.component';
 import { TeamComponent } from './components/pages/team/team.component';
 import { PricingComponent } from './components/pages/pricing/pricing.component';
 import { ProjectsComponent } from './components/pages/projects/projects.component';
+import { AuthRoutingModule } from './auth-routing.module';
 
 @NgModule({
   declarations: [
@@ -66,7 +67,8 @@ import { ProjectsComponent } from './components/pages/projects/projects.componen
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    AuthRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
