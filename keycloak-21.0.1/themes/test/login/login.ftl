@@ -75,9 +75,9 @@
     </#if>
   <#elseif section="info">
     <#if realm.password && realm.registrationAllowed && !registrationDisabled??>
-      <div class="text-center"
-        style="display: flex; justify-content: center; align-items: center; gap: 10px;"
-      >
+      <div 
+      style="display: flex;flex-direction: column;justify-content: center;align-items: center;"
+      class="text-center text-sm text-gray-600">
         ${msg("noAccount")}
         <@linkPrimary.kw href=url.registrationUrl>
           ${msg("doRegister")}

@@ -10,7 +10,6 @@
         href="${provider.loginUrl}"
         title="${provider.displayName!}"
         type="button"
-        style="border-radius:1%; background-color: #${provider.color!}; color: #${provider.textColor!};"
       >
         <#if provider.iconClasses?has_content>
           <i class="${provider.iconClasses!}"></i>
